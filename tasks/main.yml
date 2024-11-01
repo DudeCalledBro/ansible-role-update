@@ -1,0 +1,6 @@
+- name: Include OS update tasks
+  ansible.builtin.include_tasks: "{{ lookup('ansible.builtin.first_found', params) }}"
+  vars:
+    params:
+      files:
+      - "update-{{ ansible_os_family }}.yml"

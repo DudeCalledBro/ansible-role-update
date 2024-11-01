@@ -1,0 +1,16 @@
+dependencies: []
+
+galaxy_info:
+  role_name: update
+  author: dudecalledbro
+  description: Install updates on linux systems.
+  license: "license (MIT)"
+  min_ansible_version: "2.15"
+  platforms:
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags:
+  - update
+  - system

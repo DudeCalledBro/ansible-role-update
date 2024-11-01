@@ -1,0 +1,7 @@
+- name: Rebooting system after update
+  when:
+  - update_reboot | bool
+  - ansible_connection not in ["container", "docker", "community.docker.docker"]
+  ansible.builtin.reboot:
+    reboot_timeout: "{{ update_reboot_timeout }}"
+  listen: reboot system

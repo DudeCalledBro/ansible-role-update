@@ -1,0 +1,21 @@
+argument_specs:
+  main:
+    short_description: update
+    description: "Install updates on linux systems."
+    author: dudecalledbro
+    options:
+      update_upgrade_command:
+        type: str
+        description: "set upgrade command (options: dist, full, no, safe, yes)"
+      update_cache_valid_time:
+        type: int
+        description: "update cache if not valid after n-seconds"
+      update_autoremove:
+        type: bool
+        description: "autoremove packages after update"
+      update_reboot:
+        type: bool
+        description: "reboot system after package update"
+      update_reboot_timeout:
+        type: int
+        description: "reboot timeout after package update"

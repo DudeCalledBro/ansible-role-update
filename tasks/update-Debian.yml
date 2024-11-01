@@ -1,0 +1,14 @@
+- name: Update packages (apt)
+  ansible.builtin.apt:
+    cache_valid_time: "{{ update_cache_valid_time }}"
+    update_cache: true
+    upgrade: "{{ update_upgrade_command }}"
+  notify: reboot system
+  environment:
+    DEBIAN_FRONTEND: nointeractive
+
+- name: Autoremove packages (apt)
+  ansible.builtin.apt:
+    autoremove: "{{ update_autoremove }}"
+  environment:
+    DEBIAN_FRONTEND: nointeractive

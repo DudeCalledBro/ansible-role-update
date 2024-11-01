@@ -1,0 +1,14 @@
+# Update: set upgrade command (options: dist, full, no, safe, yes)
+update_upgrade_command: dist
+
+# Update: update cache if not valid after n-seconds
+update_cache_valid_time: 1
+
+# Update: autoremove packages after update
+update_autoremove: true
+
+# Update: reboot system after package update
+update_reboot: true
+
+# Update: reboot timeout after package update
+update_reboot_timeout: 600
